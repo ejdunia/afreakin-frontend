@@ -1,0 +1,226 @@
+[
+    {
+        "id": 1,
+        "attributes": {
+            "price": 5000,
+            "createdAt": "2022-09-27T11:44:46.308Z",
+            "updatedAt": "2022-09-27T11:44:50.933Z",
+            "publishedAt": "2022-09-27T11:44:50.927Z",
+            "name": "shirt 1",
+            "content": "a shirt description",
+            "meta_description": "some description ",
+            "meta_title": "shirt meta title",
+            "slug": "shirt-1",
+            "image": {
+                "data": {
+                    "id": 31,
+                    "attributes": {
+                        "name": "IMG-20211102-WA0001.jpg",
+                        "alternativeText": "IMG-20211102-WA0001.jpg",
+                        "caption": "IMG-20211102-WA0001.jpg",
+                        "width": 693,
+                        "height": 1000,
+                        "formats": {
+                            "thumbnail": {
+                                "name": "thumbnail_IMG-20211102-WA0001.jpg",
+                                "hash": "thumbnail_IMG_20211102_WA_0001_c8c41c961a",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "path": null,
+                                "width": 108,
+                                "height": 156,
+                                "size": 4.75,
+                                "url": "/uploads/thumbnail_IMG_20211102_WA_0001_c8c41c961a.jpg"
+                            },
+                            "medium": {
+                                "name": "medium_IMG-20211102-WA0001.jpg",
+                                "hash": "medium_IMG_20211102_WA_0001_c8c41c961a",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "path": null,
+                                "width": 520,
+                                "height": 750,
+                                "size": 50.45,
+                                "url": "/uploads/medium_IMG_20211102_WA_0001_c8c41c961a.jpg"
+                            },
+                            "small": {
+                                "name": "small_IMG-20211102-WA0001.jpg",
+                                "hash": "small_IMG_20211102_WA_0001_c8c41c961a",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "path": null,
+                                "width": 347,
+                                "height": 500,
+                                "size": 28.64,
+                                "url": "/uploads/small_IMG_20211102_WA_0001_c8c41c961a.jpg"
+                            }
+                        },
+                        "hash": "IMG_20211102_WA_0001_c8c41c961a",
+                        "ext": ".jpg",
+                        "mime": "image/jpeg",
+                        "size": 66.67,
+                        "url": "/uploads/IMG_20211102_WA_0001_c8c41c961a.jpg",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2022-09-27T10:35:37.422Z",
+                        "updatedAt": "2022-09-27T10:35:37.422Z"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": 2,
+        "attributes": {
+            "price": 15000,
+            "createdAt": "2022-09-27T11:45:31.399Z",
+            "updatedAt": "2022-09-27T11:45:34.625Z",
+            "publishedAt": "2022-09-27T11:45:34.622Z",
+            "name": "jean jacket",
+            "content": "jean jacket info",
+            "meta_description": null,
+            "meta_title": null,
+            "slug": "jean-js",
+            "image": {
+                "data": {
+                    "id": 21,
+                    "attributes": {
+                        "name": "zoidpiece_1662791754719197.jpg",
+                        "alternativeText": "zoidpiece_1662791754719197.jpg",
+                        "caption": "zoidpiece_1662791754719197.jpg",
+                        "width": 774,
+                        "height": 968,
+                        "formats": {
+                            "thumbnail": {
+                                "name": "thumbnail_zoidpiece_1662791754719197.jpg",
+                                "hash": "thumbnail_zoidpiece_1662791754719197_1988543d79",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "path": null,
+                                "width": 124,
+                                "height": 156,
+                                "size": 5.61,
+                                "url": "/uploads/thumbnail_zoidpiece_1662791754719197_1988543d79.jpg"
+                            },
+                            "small": {
+                                "name": "small_zoidpiece_1662791754719197.jpg",
+                                "hash": "small_zoidpiece_1662791754719197_1988543d79",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "path": null,
+                                "width": 400,
+                                "height": 500,
+                                "size": 46.68,
+                                "url": "/uploads/small_zoidpiece_1662791754719197_1988543d79.jpg"
+                            },
+                            "medium": {
+                                "name": "medium_zoidpiece_1662791754719197.jpg",
+                                "hash": "medium_zoidpiece_1662791754719197_1988543d79",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "path": null,
+                                "width": 600,
+                                "height": 750,
+                                "size": 106.07,
+                                "url": "/uploads/medium_zoidpiece_1662791754719197_1988543d79.jpg"
+                            }
+                        },
+                        "hash": "zoidpiece_1662791754719197_1988543d79",
+                        "ext": ".jpg",
+                        "mime": "image/jpeg",
+                        "size": 190.17,
+                        "url": "/uploads/zoidpiece_1662791754719197_1988543d79.jpg",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2022-09-27T10:35:36.395Z",
+                        "updatedAt": "2022-09-27T10:35:36.395Z"
+                    }
+                }
+            }
+        }
+    },
+    {
+        "id": 3,
+        "attributes": {
+            "price": 20000,
+            "createdAt": "2022-09-27T11:46:08.247Z",
+            "updatedAt": "2022-09-27T11:46:09.578Z",
+            "publishedAt": "2022-09-27T11:46:09.571Z",
+            "name": "Sneakers",
+            "content": "sneakers",
+            "meta_description": null,
+            "meta_title": null,
+            "slug": "shoe",
+            "image": {
+                "data": {
+                    "id": 23,
+                    "attributes": {
+                        "name": "zoidpiece_166279207192576.jpg",
+                        "alternativeText": "zoidpiece_166279207192576.jpg",
+                        "caption": "zoidpiece_166279207192576.jpg",
+                        "width": 1080,
+                        "height": 810,
+                        "formats": {
+                            "thumbnail": {
+                                "name": "thumbnail_zoidpiece_166279207192576.jpg",
+                                "hash": "thumbnail_zoidpiece_166279207192576_9927844885",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "path": null,
+                                "width": 209,
+                                "height": 156,
+                                "size": 7.51,
+                                "url": "/uploads/thumbnail_zoidpiece_166279207192576_9927844885.jpg"
+                            },
+                            "medium": {
+                                "name": "medium_zoidpiece_166279207192576.jpg",
+                                "hash": "medium_zoidpiece_166279207192576_9927844885",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "path": null,
+                                "width": 750,
+                                "height": 563,
+                                "size": 59.72,
+                                "url": "/uploads/medium_zoidpiece_166279207192576_9927844885.jpg"
+                            },
+                            "small": {
+                                "name": "small_zoidpiece_166279207192576.jpg",
+                                "hash": "small_zoidpiece_166279207192576_9927844885",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "path": null,
+                                "width": 500,
+                                "height": 375,
+                                "size": 30.89,
+                                "url": "/uploads/small_zoidpiece_166279207192576_9927844885.jpg"
+                            },
+                            "large": {
+                                "name": "large_zoidpiece_166279207192576.jpg",
+                                "hash": "large_zoidpiece_166279207192576_9927844885",
+                                "ext": ".jpg",
+                                "mime": "image/jpeg",
+                                "path": null,
+                                "width": 1000,
+                                "height": 750,
+                                "size": 93.66,
+                                "url": "/uploads/large_zoidpiece_166279207192576_9927844885.jpg"
+                            }
+                        },
+                        "hash": "zoidpiece_166279207192576_9927844885",
+                        "ext": ".jpg",
+                        "mime": "image/jpeg",
+                        "size": 105.7,
+                        "url": "/uploads/zoidpiece_166279207192576_9927844885.jpg",
+                        "previewUrl": null,
+                        "provider": "local",
+                        "provider_metadata": null,
+                        "createdAt": "2022-09-27T10:35:36.488Z",
+                        "updatedAt": "2022-09-27T10:35:36.488Z"
+                    }
+                }
+            }
+        }
+    }
+]
