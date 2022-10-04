@@ -13,11 +13,11 @@ import ShareIcon from "@mui/icons-material/Share";
 
 const ProductCard = ({ product }) => {
     return (
-        <Card sx={{ maxWidth: 350 }} elevation={1}>
+        <Card sx={{ maxWidth: "auto" }} elevation={1}>
             <CardActionArea>
                 <Link href={`/products/${product.id}`}>
                     <a>
-                        <CardMedia sx={{ maxWidth: 350 }}>
+                        <CardMedia>
                             <Image
                                 src={fromImageToUrl(product.attributes.image)}
                                 alt="image"
@@ -25,17 +25,33 @@ const ProductCard = ({ product }) => {
                                 height="100%"
                                 layout="responsive"
                                 objectFit="cover"
+                                // objectFit="contain"
+                                // change objectFit to contain on hover
                             />
                         </CardMedia>
                         <CardHeader
-                            overflow="hidden"
-                            title={product.attributes.name}
-                            subheader={`N${toTwoDP(product.attributes.price)}`}
-                            subheaderTypographyProps={{
-                                fontSize: "2rem",
-                                color: "black",
-                            }}
-                            titleTypographyProps={{ fontSize: "2.5rem" }}
+                            title={
+                                <Typography
+                                    noWrap
+                                    fontSize="2.5rem"
+                                    display="inline-block"
+                                >
+                                    {product.attributes.name}
+                                </Typography>
+                            }
+                            subheader={
+                                <Typography nowrap fontSize="2rem">
+                                    {`N${toTwoDP(product.attributes.price)}`}
+                                </Typography>
+                            }
+                            // subheaderTypographyProps={{
+                            //     fontSize: "2rem",
+                            //     color: "black",
+                            // }}
+                            // titleTypographyProps={{
+                            //     fontSize: "2.5rem",
+                            //     textoverflow: "hidden",
+                            // }}
                         />{" "}
                     </a>
                 </Link>
