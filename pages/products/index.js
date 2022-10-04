@@ -4,8 +4,14 @@ import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import { fromImageToUrl, API_URL } from "../../utils/urls";
 import { toTwoDP } from "../../utils/format";
+import { Grid } from "@mui/material";
+import { Paper } from "@mui/material";
+import Button from "@mui/material/Button";
+import * as React from "react";
+import { Container } from "@mui/material";
+import ProductCard from "../../components/ProductCard";
 
-export default function Home({ products }) {
+export default function ProductsPage({ products }) {
     // console.log(`${API_URL}/api/products?populate=*`);
     return (
         <div className={styles.container}>
@@ -18,31 +24,17 @@ export default function Home({ products }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <h1>Products</h1>
-
-            {products.data?.map((product) => {
-                return (
-                    <Link href={`/products/${product.id}`} key={product.id}>
-                        <a>
-                            <div>
-                                <Image
-                                    src={fromImageToUrl(
-                                        product.attributes.image
-                                    )}
-                                    alt="image"
-                                    width="100%"
-                                    height="100%"
-                                    // layout="responsive"
-                                    objectFit="contain"
-                                />
-                            </div>
-                            <div>
-                                {product.attributes.name}{" "}
-                                {toTwoDP(product.attributes.price)}
-                            </div>
-                        </a>
-                    </Link>
-                );
-            })}
+            <Container>
+                <Grid container spacing={5}>
+                    {products.data?.map((product) => {
+                        return (
+                            <Grid item key={product.id} xs={12} sm={6} md={4}>
+                                <ProductCard product={product} />
+                            </Grid>
+                        );
+                    })}
+                </Grid>
+            </Container>
         </div>
     );
 }

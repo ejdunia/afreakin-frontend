@@ -1,29 +1,28 @@
-// import products from "../../products.json";
 import Image from "next/image";
 import { fromImageToUrl, API_URL } from "../../utils/urls";
 import Head from "next/head";
 import { toTwoDP } from "../../utils/format";
-import { getProducts, getProduct } from "../../utils/urls";
-// const product = products[0];
+// import { Grid } from "@mui/material";
+// import { Paper } from "@mui/material";
 
-const testUrls = async () => {
-    // // fetch the data
-    // const product_res = await fetch(`${API_URL}/api/products?populate=*`);
-    // // const product_res = await fetch(`${API_URL}/api/products?populate=*`);
-    // const products = await product_res.json();
+// const testUrls = async () => {
+//     // // fetch the data
+//     // const product_res = await fetch(`${API_URL}/api/products?populate=*`);
+//     // // const product_res = await fetch(`${API_URL}/api/products?populate=*`);
+//     // const products = await product_res.json();
 
-    // const paths = products.data.map((product) => {
-    //     // return product.attributes.slug;
-    //     return product.id;
-    // });
-    const product_res = await fetch(`${API_URL}/api/products/${1}/?populate=*`);
-    const product = await product_res.json();
-    // return {
-    //     product,
-    // };
-    console.log(product.data.attributes.image.data.attributes.url);
-};
-testUrls();
+//     // const paths = products.data.map((product) => {
+//     //     // return product.attributes.slug;
+//     //     return product.id;
+//     // });
+//     const product_res = await fetch(`${API_URL}/api/products/${1}/?populate=*`);
+//     const product = await product_res.json();
+//     // return {
+//     //     product,
+//     // };
+//     console.log(product.data.attributes.image.data.attributes.url);
+// };
+// testUrls();
 
 const Product = ({ product }) => {
     return (
@@ -44,8 +43,8 @@ const Product = ({ product }) => {
             <Image
                 src={fromImageToUrl(product.data.attributes.image)}
                 alt={`${product.data.attributes.slug}`}
-                width="300px"
-                height="300px"
+                width="500px"
+                height="500px"
                 // layout="responsive"
             />
             <h4>{product.data.attributes.name}</h4>
