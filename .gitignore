@@ -15,7 +15,7 @@
 /out/
 
 # production
-/build
+/buildgit filter-branch --force --index-filter 'git rm --cached --ignore-unmatch application/.env.example' --prune-empty --tag-name-filter cat -- --all
 
 # misc
 .DS_Store
