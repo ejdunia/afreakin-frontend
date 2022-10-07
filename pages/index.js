@@ -1,11 +1,33 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { fromImageToUrl, API_URL } from "../utils/urls";
+import { counterActions } from "../store";
+import { useSelector, useDispatch } from "react-redux";
+import { API_URL } from "../utils/urls";
 import { toTwoDP } from "../utils/format";
+import Navbar from "../components/Navbar";
 
 export default function Home({ products }) {
-    return <h1>Home</h1>
+    const counter = useSelector((state) => state.counter);
+    const dispatch = useDispatch();
+    const increment = () => {
+        dispatch(counterActions.increment());
+    };
+    const decrement = () => {
+        dispatch(counterActions.decrement());
+    };
+    const addBy = () => {
+        dispatch(counterActions.addBy(10));
+    };
+    return (
+        <>
+            <h1>Home</h1>
+            <h2>{counter}</h2>
+            <button onClick={() => increment()}>increment</button>
+            <button onClick={() => decrement()}>decrement</button>
+            <button onClick={() => addBy()}>add by 10</button>
+        </>
+    );
 }
 
 export async function getStaticProps() {

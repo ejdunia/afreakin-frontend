@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
                                 layout="responsive"
                                 objectFit="cover"
                                 // objectFit="contain"
-                                // change objectFit to contain on hover
+                                // change objectFit to contain on hover 
                             />
                         </CardMedia>
                         <CardHeader
@@ -41,7 +41,7 @@ const ProductCard = ({ product }) => {
                             }
                             subheader={
                                 <Typography nowrap fontSize="2rem">
-                                    {`N${toTwoDP(product.attributes.price)}`}
+                                    {`₦${toTwoDP(product.attributes.price)}`}
                                 </Typography>
                             }
                             // subheaderTypographyProps={{

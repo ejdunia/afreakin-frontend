@@ -9,7 +9,7 @@ import { Paper } from "@mui/material";
 import Button from "@mui/material/Button";
 import * as React from "react";
 import { Container } from "@mui/material";
-import ProductCard from "../../components/ProductCard";
+import ProductCard from "../../components/ProductGridCard";
 
 export default function ProductsPage({ products }) {
     // console.log(`${API_URL}/api/products?populate=*`);
@@ -26,12 +26,13 @@ export default function ProductsPage({ products }) {
             <h1>Products</h1>
             <Container
                 sx={{
+                    // maxWidth: "700px",
                     // border: '2px solid red',
                     padding: "2rem",
                 }}
-                justifyContent="center"
-                alignItems="center"
-                background="red"
+                // justifyContent="center"
+                // alignItems="center"
+                // background="red"
             >
                 <Grid
                     container
@@ -42,7 +43,7 @@ export default function ProductsPage({ products }) {
                 >
                     {products.data?.map((product) => {
                         return (
-                            <Grid item key={product.id} xs={12} sm={6} md={4}>
+                            <Grid item key={product.id} xs={9} sm={6} md={4}>
                                 <ProductCard product={product} />
                             </Grid>
                         );

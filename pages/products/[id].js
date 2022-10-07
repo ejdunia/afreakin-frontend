@@ -48,7 +48,7 @@ const Product = ({ product }) => {
                 // layout="responsive"
             />
             <h4>{product.data.attributes.name}</h4>
-            <p>N{toTwoDP(product.data.attributes.price)}</p>
+            <p>₦{toTwoDP(product.data.attributes.price)}</p>
             <p>{product.data.attributes.content}</p>
         </div>
     );
