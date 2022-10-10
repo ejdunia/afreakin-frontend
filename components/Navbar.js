@@ -31,7 +31,7 @@ const Navbar = () => {
                     aria-label="cart"
                     onClick={() => console.log("cart icon clicked")}
                 >
-                    <ShoppingCartIcon sx={{ fontSize: "3rem" }} />
+                    <ShoppingCartIcon sx={{ fontSize: "3rem", color: 'red' }} />
                 </IconButton>
             </nav>
         </>
