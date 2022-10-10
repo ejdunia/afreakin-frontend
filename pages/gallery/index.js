@@ -3,10 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 import styles from "../../styles/Home.module.css";
 import { fromImageToUrl, API_URL } from "../../utils/urls";
-import { toTwoDP } from "../../utils/format";
-import { Grid } from "@mui/material";
 
-export default function Home({ artworks }) {
+export default function Artworks({ artworks }) {
     // console.log(`${API_URL}/api/artworks?populate=*`);
     return (
         <div className={styles.container}>
@@ -35,7 +33,6 @@ export default function Home({ artworks }) {
                             </div>
                             <div>
                                 {art.attributes.name}{" "}
-                                {toTwoDP(art.attributes.price)}
                             </div>
                         </a>
                     </Link>

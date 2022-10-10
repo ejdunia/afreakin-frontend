@@ -10,8 +10,11 @@ import Button from "@mui/material/Button";
 import * as React from "react";
 import { Container } from "@mui/material";
 import ProductCard from "../../components/ProductGridCard";
+import { useSelector } from "react-redux";
 
 export default function ProductsPage({ products }) {
+     const cartItems = useSelector((state) => state.cart.itemsList);
+     console.log(cartItems);
     // console.log(`${API_URL}/api/products?populate=*`);
     return (
         <div className={styles.container}>

@@ -10,8 +10,16 @@ import { CardActionArea } from "@mui/material";
 import IconButton from "@mui/material/IconButton";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ShareIcon from "@mui/icons-material/Share";
+import { useDispatch, useSelector } from "react-redux";
+import { cartActions } from "../store/cartSlice";
 
 const ProductCard = ({ product }) => {
+    const dispatch = useDispatch();
+
+    const addToCart = () => {
+        dispatch(cartActions.addToCart({ product }));
+    };
+
     return (
         <Card sx={{ maxWidth: "auto" }} elevation={1}>
             <CardActionArea>
@@ -26,7 +34,7 @@ const ProductCard = ({ product }) => {
                                 layout="responsive"
                                 objectFit="cover"
                                 // objectFit="contain"
-                                // change objectFit to contain on hover 
+                                // change objectFit to contain on hover
                             />
                         </CardMedia>
                         <CardHeader
@@ -40,24 +48,16 @@ const ProductCard = ({ product }) => {
                                 </Typography>
                             }
                             subheader={
-                                <Typography nowrap fontSize="2rem">
+                                <Typography fontSize="2rem">
                                     {`₦${toTwoDP(product.attributes.price)}`}
                                 </Typography>
                             }
-                            // subheaderTypographyProps={{
-                            //     fontSize: "2rem",
-                            //     color: "black",
-                            // }}
-                            // titleTypographyProps={{
-                            //     fontSize: "2.5rem",
-                            //     textoverflow: "hidden",
-                            // }}
                         />{" "}
                     </a>
                 </Link>
             </CardActionArea>
             <CardActions>
-                <IconButton aria-label="cart">
+                <IconButton aria-label="cart" onClick={addToCart}>
                     <ShoppingCartIcon sx={{ fontSize: "3rem" }} />
                 </IconButton>
                 <IconButton aria-label="share">

@@ -2,8 +2,6 @@ import Image from "next/image";
 import { fromImageToUrl, API_URL } from "../../utils/urls";
 import Head from "next/head";
 import { toTwoDP } from "../../utils/format";
-// import { Grid } from "@mui/material";
-// import { Paper } from "@mui/material";
 
 // const testUrls = async () => {
 //     // // fetch the data
