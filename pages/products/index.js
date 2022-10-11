@@ -1,21 +1,13 @@
 import Head from "next/head";
-import Link from "next/link";
-import Image from "next/image";
 import styles from "../../styles/Home.module.css";
-import { fromImageToUrl, API_URL } from "../../utils/urls";
-import { toTwoDP } from "../../utils/format";
-import { Grid } from "@mui/material";
-import { Paper } from "@mui/material";
-import Button from "@mui/material/Button";
-import * as React from "react";
-import { Container } from "@mui/material";
+import { API_URL } from "../../utils/urls";
+import { Grid, Container } from "@mui/material";
 import ProductCard from "../../components/ProductGridCard";
 import { useSelector } from "react-redux";
 
 export default function ProductsPage({ products }) {
      const cartItems = useSelector((state) => state.cart.itemsList);
      console.log(cartItems);
-    // console.log(`${API_URL}/api/products?populate=*`);
     return (
         <div className={styles.container}>
             <Head>

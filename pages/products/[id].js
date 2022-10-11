@@ -45,7 +45,6 @@ const Product = ({ product }) => {
                 height="500px"
                 // layout="responsive"
             />
-            <h4>{product.data.attributes.name}</h4>
             <p>₦{toTwoDP(product.data.attributes.price)}</p>
             <p>{product.data.attributes.content}</p>
         </div>
@@ -71,7 +70,6 @@ export async function getStaticPaths() {
     const paths = products.data.map((product) => {
         return { params: { id: product.id.toString() } };
     });
-    console.log(paths);
     //  return them
     return {
         paths,

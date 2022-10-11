@@ -45,10 +45,10 @@ h6 {
 }
 nav {
     margin: 10px auto 80px;
-    padding: 10px 0;
+    padding: 2px 0;
     display: flex;
     justify-content: flex-end;
-    align-items: flex-end;
+    align-items: center;
     border-bottom: 1px solid #ddd;
     font-size: 1.2rem;
 }

@@ -1,10 +1,7 @@
 import Head from "next/head";
 import Link from "next/link";
 import Image from "next/image";
-import { useSelector, useDispatch } from "react-redux";
-import { API_URL } from "../utils/urls";
-import { toTwoDP } from "../utils/format";
-import Navbar from "../components/Navbar";
+// import { useSelector, useDispatch } from "react-redux";
 
 export default function Home({}) {
     return (

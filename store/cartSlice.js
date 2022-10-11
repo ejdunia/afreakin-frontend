@@ -19,9 +19,11 @@ const cartSlice = createSlice({
                     id: newItem.product.id,
                     price: newItem.product.attributes.price,
                     quantity: 1,
+                    image: newItem.product.attributes.image,
                     totalPrice: newItem.product.attributes.price,
                     name: newItem.product.attributes.name,
                 });
+                state.totalQuantity++;
             }
         },
         removeFromCart() {},
