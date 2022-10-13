@@ -95,18 +95,18 @@ export const sendCartData = (cart) => {
                     type: "success",
                 })
             );
-            try {
-                await sendRequest();
-            } catch (error) {
-                dispatch(
-                    uiActions.showNotification({
-                        open: true,
-                        message: "sending request failed",
-                        type: "error",
-                    })
-                );
-            }
         };
+        try {
+            await sendRequest();
+        } catch (error) {
+            dispatch(
+                uiActions.showNotification({
+                    open: true,
+                    message: "sending request failed",
+                    type: "error",
+                })
+            );
+        }
     };
 };
 export const cartActions = cartSlice.actions;
