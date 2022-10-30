@@ -31,12 +31,12 @@ export default function Home({}) {
     );
 }
 
-// export async function getStaticProps() {
-//     // fetch the data
-//     const product_res = await fetch(`${API_URL}/api/products/?populate=*`);
-//     const products = await product_res.json();
-//     // return the data as props
-//     return {
-//         props: { products },
-//     };
-// }
+export async function getStaticProps() {
+    // fetch the data
+    const product_res = await fetch(`${API_URL}/api/products/?populate=*`);
+    const products = await product_res.json();
+    // return the data as props
+    return {
+        props: { products },
+    };
+}

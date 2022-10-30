@@ -1,6 +1,7 @@
 import { getToggleButtonGroupUtilityClass } from "@mui/material";
 import { createSlice } from "@reduxjs/toolkit";
 import { uiActions } from "./uiSlice";
+
 const cartSlice = createSlice({
     name: "cart",
     initialState: { itemsList: [], totalQuantity: 0, showCart: false },

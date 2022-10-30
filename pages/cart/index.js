@@ -6,6 +6,7 @@ import IconButton from "@mui/material/IconButton";
 import CardActions from "@mui/material/CardActions";
 import { cartActions } from "../../store/cartSlice";
 import CartItem from "../../components/CartItem";
+
 const Cart = () => {
     const dispatch = useDispatch();
 
