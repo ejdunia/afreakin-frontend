@@ -17,7 +17,6 @@ export default function Artworks({ artworks }) {
                 <meta name="description" content="Afreakin Art Gallery" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <h1>Gallery</h1>
             <div>
                 <Swiper
                     spaceBetween={100}
@@ -42,39 +41,41 @@ export default function Artworks({ artworks }) {
                     pagination={{
                         clickable: true,
                     }}
+                    keyboard={true}
                     navigation={true}
                     mousewheel={true}
                     onSlideChange={() => console.log("slide change")}
                     onSwiper={(swiper) => console.log(swiper)}
                     modules={[Mousewheel, Pagination, Autoplay, Navigation]}
-                    className="mySwiper"
+                    // className="mySwiper"
+                    className={styles.swiperContainer}
                 >
                     {/* todo checkout how to mpve the navigation buttons to the bottom */}
                     {artworks.data?.map((art) => {
                         return (
-                                <SwiperSlide key={art.id}>
-                                    <Link
-                                        href={`/artworks/${art.id}`}
-                                        className={styles.artwork}
-                                    >
-                                        <a className={styles.anchor}>
-                                            <Image
-                                                src={fromImageToUrl(
-                                                    art.attributes.image
-                                                )}
-                                                alt={art.attributes.name}
-                                                width="623px"
-                                                height="675px"
-                                                // layout="responsive"
-                                                objectFit="contain"
-                                                // objectFit="cover"
-                                                object-position="top"
-                                                className={styles.image}
-                                            />
-                                            <div>{art.attributes.name} </div>
-                                        </a>
-                                    </Link>
-                                </SwiperSlide>
+                            <SwiperSlide key={art.id}>
+                                <Link
+                                    href={`/artworks/${art.id}`}
+                                    className={styles.artwork}
+                                >
+                                    <a className={styles.anchortag}>
+                                        <Image
+                                            src={fromImageToUrl(
+                                                art.attributes.image
+                                            )}
+                                            alt={art.attributes.name}
+                                            width="623px"
+                                            height="675px"
+                                            // layout="responsive"
+                                            objectFit="contain"
+                                            // objectFit="cover"
+                                            object-position="top"
+                                            className={styles.image}
+                                        />
+                                        <div>{art.attributes.name} </div>
+                                    </a>
+                                </Link>
+                            </SwiperSlide>
                         );
                     })}
                 </Swiper>

@@ -34,10 +34,10 @@ const Navbar = () => {
                         <IconButton
                             aria-label="cart"
                             onClick={() => console.log("cart icon clicked")}
-                            sx={{ fontSize: "3rem", color: "red" }}
+                            sx={{ fontSize: "3rem", color: "#31093e" }}
                         >
                             <ShoppingCartIcon
-                                sx={{ fontSize: "3rem", color: "red" }}
+                                sx={{ fontSize: "3rem", color: "#31093e" }}
                             />{" "}
                             <p>{quantity}</p>
                         </IconButton>
