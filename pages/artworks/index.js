@@ -19,6 +19,7 @@ export default function Artworks({ artworks }) {
             </Head>
             <div className={styles.gallery}>
                 <Swiper
+                    className={styles.swiperContainer}
                     spaceBetween={100}
                     centeredSlides={true}
                     loop={true}
@@ -48,7 +49,6 @@ export default function Artworks({ artworks }) {
                     onSwiper={(swiper) => console.log(swiper)}
                     modules={[Mousewheel, Pagination, Autoplay, Navigation]}
                     // className="mySwiper"
-                    className={styles.swiperContainer}
                 >
                     {/* todo checkout how to mpve the navigation buttons to the bottom */}
                     {artworks.data?.map((art) => {
@@ -58,22 +58,27 @@ export default function Artworks({ artworks }) {
                                     href={`/artworks/${art.id}`}
                                     className={styles.artwork}
                                 >
-                                    <a className={styles.anchortag}>
-                                        <Image
-                                            src={fromImageToUrl(
-                                                art.attributes.image
-                                            )}
-                                            alt={art.attributes.name}
-                                            width="623px"
-                                            height="675px"
-                                            // layout="responsive"
-                                            objectFit="contain"
-                                            // objectFit="cover"
-                                            object-position="top"
-                                            className={styles.image}
-                                        />
-                                        <div>{art.attributes.name} </div>
-                                    </a>
+                                    <div>
+                                        <a className={styles.anchortag}>
+                                            <Image
+                                                src={fromImageToUrl(
+                                                    art.attributes.image
+                                                )}
+                                                alt={art.attributes.name}
+                                                width="400px"
+                                                height="300px"
+                                                layout="responsive"
+                                                // layout="fill"
+                                                objectFit="contain"
+                                                // objectFit="cover"
+                                                // object-position="top"
+                                                className={
+                                                    styles.imagecontainer
+                                                }
+                                            />
+                                            <div>{art.attributes.name} </div>
+                                        </a>
+                                    </div>
                                 </Link>
                             </SwiperSlide>
                         );
