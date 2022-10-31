@@ -42,7 +42,7 @@ export default function Artworks({ artworks }) {
                     pagination={{
                         clickable: true,
                     }}
-                    keyboard={true}
+                    keyboard={{ enabled: true }}
                     navigation={true}
                     mousewheel={true}
                     onSlideChange={() => console.log("slide change")}
@@ -53,19 +53,16 @@ export default function Artworks({ artworks }) {
                     {/* todo checkout how to mpve the navigation buttons to the bottom */}
                     {artworks.data?.map((art) => {
                         return (
-                            <SwiperSlide key={art.id}>
-                                <Link
-                                    href={`/artworks/${art.id}`}
-                                    className={styles.artwork}
-                                >
-                                    <div>
+                            <SwiperSlide key={art.id} className={styles.artcontainer}>
+                                <Link href={`/artworks/${art.id}`}>
+                                    <div className={styles.art}>
                                         <a className={styles.anchortag}>
                                             <Image
                                                 src={fromImageToUrl(
                                                     art.attributes.image
                                                 )}
                                                 alt={art.attributes.name}
-                                                width="400px"
+                                                width="350px"
                                                 height="300px"
                                                 layout="responsive"
                                                 // layout="fill"
