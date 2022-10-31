@@ -11,13 +11,13 @@ import styles from "../../styles/Gallery.module.css";
 
 export default function Artworks({ artworks }) {
     return (
-        <div className={styles.gallery}>
+        <div className={styles.gallerybg}>
             <Head>
                 <title>Artworks</title>
                 <meta name="description" content="Afreakin Art Gallery" />
                 <link rel="icon" href="/favicon.ico" />
             </Head>
-            <div>
+            <div className={styles.gallery}>
                 <Swiper
                     spaceBetween={100}
                     centeredSlides={true}
