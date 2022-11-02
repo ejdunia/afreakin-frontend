@@ -29,7 +29,7 @@ export default function Artworks({ artworks }) {
                             slidesPerView: 1,
                             spaceBetween: 20,
                         },
-                        768: {
+                        800: {
                             slidesPerView: 2,
                             spaceBetween: 20,
                         },
@@ -45,15 +45,17 @@ export default function Artworks({ artworks }) {
                     keyboard={{ enabled: true }}
                     navigation={true}
                     mousewheel={true}
-                    onSlideChange={() => console.log("slide change")}
-                    onSwiper={(swiper) => console.log(swiper)}
+                    // onSlideChange={() => console.log("slide change")}
+                    // onSwiper={(swiper) => console.log(swiper)}
                     modules={[Mousewheel, Pagination, Autoplay, Navigation]}
-                    // className="mySwiper"
                 >
-                    {/* todo checkout how to mpve the navigation buttons to the bottom */}
+                    {/* todo checkout how to move the navigation buttons to the bottom */}
                     {artworks.data?.map((art) => {
                         return (
-                            <SwiperSlide key={art.id} className={styles.artcontainer}>
+                            <SwiperSlide
+                                key={art.id}
+                                className={styles.artcontainer}
+                            >
                                 <Link href={`/artworks/${art.id}`}>
                                     <div className={styles.art}>
                                         <a className={styles.anchortag}>
@@ -62,16 +64,10 @@ export default function Artworks({ artworks }) {
                                                     art.attributes.image
                                                 )}
                                                 alt={art.attributes.name}
-                                                width="350px"
-                                                height="300px"
+                                                width="500px"
+                                                height="350px"
                                                 layout="responsive"
-                                                // layout="fill"
                                                 objectFit="contain"
-                                                // objectFit="cover"
-                                                // object-position="top"
-                                                className={
-                                                    styles.imagecontainer
-                                                }
                                             />
                                             <div>{art.attributes.name} </div>
                                         </a>

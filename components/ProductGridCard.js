@@ -32,8 +32,7 @@ const ProductCard = ({ product }) => {
                                 width="100%"
                                 height="100%"
                                 layout="responsive"
-                                objectFit="cover"
-                                // objectFit="contain"
+                                // objectFit="cover"
                                 // change objectFit to contain on hover
                             />
                         </CardMedia>
@@ -44,7 +43,7 @@ const ProductCard = ({ product }) => {
                                     fontSize="2.5rem"
                                     display="inline-block"
                                 >
-                                    {product.attributes.name}
+                                    {product.attributes.productName}
                                 </Typography>
                             }
                             subheader={

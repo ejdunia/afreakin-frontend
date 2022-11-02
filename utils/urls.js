@@ -1,4 +1,3 @@
-import Image from "next/image";
 export const API_URL =
     process.env.NEXT_PUBLIC_API_URL || "http://localhost:1337";
 
@@ -52,3 +51,22 @@ export const fromImageToUrl = (image) => {
 
     return image.data.attributes.url;
 };
+
+// const testUrls = async () => {
+//     // // fetch the data
+//     // const product_res = await fetch(`${API_URL}/api/products?populate=*`);
+//     // // const product_res = await fetch(`${API_URL}/api/products?populate=*`);
+//     // const products = await product_res.json();
+
+//     // const paths = products.data.map((product) => {
+//     //     // return product.attributes.slug;
+//     //     return product.id;
+//     // });
+//     const product_res = await fetch(`${API_URL}/api/products/${1}/?populate=*`);
+//     const product = await product_res.json();
+//     // return {
+//     //     product,
+//     // };
+//     console.log(product.data.attributes.image.data.attributes.url);
+// };
+// testUrls();

@@ -2,29 +2,11 @@ import Image from "next/image";
 import { fromImageToUrl, API_URL } from "../../utils/urls";
 import Head from "next/head";
 import { toTwoDP } from "../../utils/format";
-
-// const testUrls = async () => {
-//     // // fetch the data
-//     // const product_res = await fetch(`${API_URL}/api/products?populate=*`);
-//     // // const product_res = await fetch(`${API_URL}/api/products?populate=*`);
-//     // const products = await product_res.json();
-
-//     // const paths = products.data.map((product) => {
-//     //     // return product.attributes.slug;
-//     //     return product.id;
-//     // });
-//     const product_res = await fetch(`${API_URL}/api/products/${1}/?populate=*`);
-//     const product = await product_res.json();
-//     // return {
-//     //     product,
-//     // };
-//     console.log(product.data.attributes.image.data.attributes.url);
-// };
-// testUrls();
+import styles from "./ProductsDetailsPage.module.css";
 
 const Product = ({ product }) => {
     return (
-        <div>
+        <div className={styles.container}>
             <Head>
                 {product.data.attributes.meta_title && (
                     <title>{product.data.attributes.meta_title}</title>
@@ -36,17 +18,25 @@ const Product = ({ product }) => {
                     />
                 )}
             </Head>
-
-            <h3>{product.data.attributes.name}</h3>
-            <Image
-                src={fromImageToUrl(product.data.attributes.image)}
-                alt={`${product.data.attributes.slug}`}
-                width="500px"
-                height="500px"
-                // layout="responsive"
-            />
-            <p>₦{toTwoDP(product.data.attributes.price)}</p>
-            <p>{product.data.attributes.content}</p>
+            <div className={styles.imageContainer}>
+                <div className={styles.productImage}>
+                    <Image
+                        src={fromImageToUrl(product.data.attributes.image)}
+                        alt={`${product.data.attributes.slug}`}
+                        layout="fill"
+                        // objectFit="contain"
+                    />
+                </div>
+            </div>
+            <div className={styles.detailsSection}>
+                <h3 className={styles.productName}>
+                    {product.data.attributes.productName}
+                </h3>
+                <p className={styles.price}>
+                    ₦{toTwoDP(product.data.attributes.price)}
+                </p>
+                <p className={styles.content}>{product.data.attributes.content}</p>
+            </div>
         </div>
     );
 };

@@ -13,39 +13,46 @@
     justify-content: center;
     scroll-snap-type: block;
 }
+.art {
+    box-sizing: border-box;
 
-.art:hover  {
-    /* border: 1px solid red; */
+    border: 3px solid red;
+}
+
+.art:hover {
     /* transform: scale(0.9); */
+    /* padding-bottom: 40px; */
 }
 .artcontainer {
     box-sizing: border-box;
 }
 .artcontainer:hover {
-    /* background-color: #8d0994; */
-    /* padding-bottom: 40px; */
+}
+
+.greenOutline {
+    /* border: 10px solid saddlebrown; */
+    height: fit-content;
+    width: fit-content;
 }
 .imagecontainer {
-    border: 1px solid black;
+    width: 100%;
+    height: 100%;
+    outline: 10px solid black;
     /* display: flex; */
     /* align-self: center; */
     /* transform: scale(0.9); */
 }
 
 .anchortag {
-    /* display: block; */
-    /* position: relative; */
-    /* display: flex; */
-    /* width: 80rem; */
-    /* height: 80rem; */
-    /* align-items: center; */
+    display: block;
+    align-items: center;
     border-radius: 20px;
     /* filter: drop-shadow(16px 16px 10px black); */
-    /* border: 3px solid firebrick; */
+    border: 3px solid rgb(217, 246, 4);
     justify-content: center;
-    /* background-color: rgb(17, 11, 14); */
+    background-color: rgb(17, 11, 14);
     /* background: url("../public/frame.png"); */
-    transform: scale(0.1);
+    /* transform: scale(0.1); */
 }
 
 .swiperContainer {

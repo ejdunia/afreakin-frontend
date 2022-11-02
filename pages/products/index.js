@@ -6,8 +6,8 @@ import ProductCard from "../../components/ProductGridCard";
 import { useSelector } from "react-redux";
 
 export default function ProductsPage({ products }) {
-     const cartItems = useSelector((state) => state.cart.itemsList);
-     console.log(cartItems);
+    const cartItems = useSelector((state) => state.cart.itemsList);
+    console.log(cartItems);
     return (
         <div className={styles.container}>
             <Head>
@@ -19,16 +19,7 @@ export default function ProductsPage({ products }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
             <h1>Products</h1>
-            <Container
-                sx={{
-                    // maxWidth: "700px",
-                    // border: '2px solid red',
-                    padding: "2rem",
-                }}
-                // justifyContent="center"
-                // alignItems="center"
-                // background="red"
-            >
+            <Container>
                 <Grid
                     container
                     spacing={5}

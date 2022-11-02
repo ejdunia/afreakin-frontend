@@ -8,9 +8,9 @@ body {
     font-family: "Montserrat", sans-serif;
     position: relative;
     --primaryPurple: #31093e;
-    --primaryWhite: #ffffff;
-    /* height: auto; */
-    /* width: 320px; */
+    --primaryWhite: #f3f4f6;
+    --primaryBlack: #0f172a;
+    --fadedPurple: #d8b4fe;
 }
 
 a {
@@ -26,65 +26,56 @@ h5,
 h6 {
     font-family: "Playfair Display", serif;
     font-weight: bold;
-    font-size: 2rem;
 }
 
 * {
     box-sizing: border-box;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     html {
         color-scheme: dark;
     }
     body {
         color: white;
     }
-}
+} */
 
 .content {
-    /* border: 5px solid rgb(229, 150, 12); */
-    /* outline: 3px solid rgb(158, 222, 41); */
-    /* position: relative; */
-    min-width: 320px;
-
-    /* width: 100%; */
+    border: 5px solid rgb(229, 150, 12);
     min-height: 100vh;
+    min-width: 100vw;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* align-items: center; */
     /* background: url("../public/gal_bg1.jpeg") ; */
-    /* background-size: cover; */
-    backdrop-filter: blur(8px);
 }
 
 nav {
-    /* margin: 10px auto 80px; */
-    padding: 5px 25px;
+    padding: 0px 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    /* border-bottom: 1px solid #ddd; */
+    outline: 1px solid #ddd;
     color: var(--primaryPurple);
-    font-size: 1rem;
+    font-size: 1.3rem;
     font-weight: 600;
     background-color: var(--primaryWhite);
     backdrop-filter: blur(8px);
-    /* filter: opacity(80%); */
     width: 100%;
 }
 nav a {
     margin-left: 12px;
+    font-size: 1.3rem;
 }
 nav .logo {
     margin-right: auto;
     border: 1px solid rebeccapurple;
 }
 footer {
-    height: 100px;
+    height: 10rem;
     background-color: var(--primaryWhite);
     color: var(--primaryPurple);
     display: flex;
