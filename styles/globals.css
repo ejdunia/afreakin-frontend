@@ -47,6 +47,7 @@ h6 {
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     justify-content: space-between;
     /* background: url("../public/gal_bg1.jpeg") ; */
@@ -58,13 +59,13 @@ nav {
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    outline: 1px solid #ddd;
+    outline: 3px solid rgb(178, 9, 9);
     color: var(--primaryPurple);
     font-size: 1.3rem;
     font-weight: 600;
     background-color: var(--primaryWhite);
     backdrop-filter: blur(8px);
-    width: 100%;
+    width: 100vw;
 }
 nav a {
     margin-left: 12px;
@@ -83,5 +84,5 @@ footer {
     align-items: center;
     width: 100%;
     text-align: center;
-    padding: 30px 0;
+    /* padding: 30px 0; */
 }

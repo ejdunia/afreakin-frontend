@@ -2,43 +2,46 @@
     position: relative;
     object-fit: cover;
     height: 66rem;
-    width: 60rem;
+    width: 57rem;
     border-radius: 7px;
-    /* outline: 4px solid saddlebrown ; */
     overflow: hidden;
     box-shadow: #00000030 0px 10px 20px, var(--primaryPurple) 0px 3px 4px;
 }
 .mainContainer {
-    height: 90vh;
     display: flex;
+    flex-grow: 1;
 }
 .imageContainer {
-    /* display: flex; */
-    /* justify-content: center; */
     margin: 2rem;
-    /* align-items: center; */
+    /* padding: 2rem; */
     background-color: var(--fadedPurple);
-    /* border: 5px solid rgb(28, 196, 180); */
+    box-sizing: border-box;
 }
 
-@media (max-width: 680px) {
-    .image {
-        width: 80vw;
-        height: max(45vh, 80vw);
-    }
-}
 .productsContainer {
     display: flex;
+    background-color: var(--fadedPurple);
     box-sizing: border-box;
-    background-color: rgb(203, 183, 154);
+    /* padding: 1rem; */
     flex-grow: 1;
     flex-wrap: wrap;
-    /* padding: 1rem; */
-    /* margin: 1rem; */
-    /* height: 100%; */
     align-items: center;
     justify-content: center;
 }
+
+.detailsSection {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 1rem;
+    align-items: center;
+    max-width: 80rem;
+    height: max-content;
+    height: 66rem;
+    padding: 2rem;
+    border: 2px solid rgb(103, 3, 136);
+}
+
 .productName {
     font-size: 3rem;
     text-align: left;
@@ -52,14 +55,22 @@
     font-size: 2rem;
     text-align: justify;
 }
-.detailsSection {
-    line-height: 3rem;
-    /* box-sizing: border-box; */
-    /* display: flex; */
-    padding: 2rem;
-    border: 2px solid rgb(12, 160, 239);
-    max-width: 60rem;
-    flex-direction: column;
-    max-height: 70rem;
-    justify-content: center;
+
+@media (max-width: 958px) {
+    .image {
+        width: 85vw;
+        height: max(45vh, 80vw);
+    }
+    .detailsSection {
+        height: fit-content;
+        justify-content: center;
+        width: 80vw;
+    }
+}
+@media (min-width: 1020px) {
+    .productsContainer {
+        flex-wrap: nowrap;
+        /* flex-grow: 0; */
+        /* flex-shrink: 1; */
+    }
 }
