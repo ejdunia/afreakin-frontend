@@ -6,36 +6,39 @@ import styles from "./ProductsDetailsPage.module.css";
 
 const Product = ({ product }) => {
     return (
-        <div className={styles.container}>
-            <Head>
-                {product.data.attributes.meta_title && (
-                    <title>{product.data.attributes.meta_title}</title>
-                )}
-                {product.data.attributes.meta_description && (
-                    <meta
-                        name="description"
-                        content={product.data.attributes.meta_description}
-                    />
-                )}
-            </Head>
-            <div className={styles.imageContainer}>
-                <div className={styles.productImage}>
-                    <Image
-                        src={fromImageToUrl(product.data.attributes.image)}
-                        alt={`${product.data.attributes.slug}`}
-                        layout="fill"
-                        // objectFit="contain"
-                    />
+        <div className={styles.mainContainer}>
+            <div className={styles.productsContainer}>
+                <Head>
+                    {product.data.attributes.meta_title && (
+                        <title>{product.data.attributes.meta_title}</title>
+                    )}
+                    {product.data.attributes.meta_description && (
+                        <meta
+                            name="description"
+                            content={product.data.attributes.meta_description}
+                        />
+                    )}
+                </Head>
+                <div className={styles.imageContainer}>
+                    <div className={styles.image}>
+                        <Image
+                            src={fromImageToUrl(product.data.attributes.image)}
+                            alt={`${product.data.attributes.slug}`}
+                            layout="fill"
+                        />
+                    </div>
                 </div>
-            </div>
-            <div className={styles.detailsSection}>
-                <h3 className={styles.productName}>
-                    {product.data.attributes.productName}
-                </h3>
-                <p className={styles.price}>
-                    ₦{toTwoDP(product.data.attributes.price)}
-                </p>
-                <p className={styles.content}>{product.data.attributes.content}</p>
+                <div className={styles.detailsSection}>
+                    <h3 className={styles.productName}>
+                        {product.data.attributes.productName}
+                    </h3>
+                    <p className={styles.price}>
+                        ₦{toTwoDP(product.data.attributes.price)}
+                    </p>
+                    <p className={styles.content}>
+                        {product.data.attributes.content}
+                    </p>
+                </div>
             </div>
         </div>
     );

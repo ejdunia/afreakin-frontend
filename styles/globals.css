@@ -14,7 +14,7 @@ body {
 }
 
 a {
-    color: inherit;
+    color: var(--primaryPurple);
     text-decoration: none;
 }
 
@@ -43,7 +43,7 @@ h6 {
 } */
 
 .content {
-    border: 5px solid rgb(229, 150, 12);
+    /* border: 5px solid rgb(229, 150, 12); */
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
