@@ -4,39 +4,44 @@ import { API_URL } from "../../utils/urls";
 import { Grid, Container } from "@mui/material";
 import ProductCard from "../../components/ProductGridCard";
 import { useSelector } from "react-redux";
+import Layout from "../../components/Layout";
 
 export default function ProductsPage({ products }) {
     const cartItems = useSelector((state) => state.cart.itemsList);
     console.log(cartItems);
     return (
-        <div className={styles.container}>
-            <Head>
-                <title>Products</title>
-                <meta
-                    name="description"
-                    content="Afreakin Product page and store"
-                />
-                <link rel="icon" href="/favicon.ico" />
-            </Head>
-            <h1>Products</h1>
-            <Container>
-                <Grid
-                    container
-                    spacing={5}
-                    direction="row"
-                    justifyContent="center"
-                    alignItems="center"
-                >
-                    {products.data?.map((product) => {
-                        return (
-                            <Grid item key={product.id} xs={9} sm={6} md={4}>
-                                <ProductCard product={product} />
-                            </Grid>
-                        );
-                    })}
-                </Grid>
-            </Container>
-        </div>
+        <Layout
+            keywords={
+                "online store, apparel, street-wear, fashion, art, jean jackets, custom merc"
+            }
+        >
+            <div className={styles.container}>
+                <h1>Products</h1>
+                <Container>
+                    <Grid
+                        container
+                        spacing={5}
+                        direction="row"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        {products.data?.map((product) => {
+                            return (
+                                <Grid
+                                    item
+                                    key={product.id}
+                                    xs={9}
+                                    sm={6}
+                                    md={4}
+                                >
+                                    <ProductCard product={product} />
+                                </Grid>
+                            );
+                        })}
+                    </Grid>
+                </Container>
+            </div>
+        </Layout>
     );
 }
 

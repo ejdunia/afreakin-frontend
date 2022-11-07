@@ -12,7 +12,7 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import ShareIcon from "@mui/icons-material/Share";
 import { useDispatch, useSelector } from "react-redux";
 import { cartActions } from "../store/cartSlice";
-
+// import Head from "next/head";
 const ProductCard = ({ product }) => {
     const dispatch = useDispatch();
 

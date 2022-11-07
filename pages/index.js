@@ -7,6 +7,7 @@ import { API_URL } from "../utils/urls";
 import Notification from "../components/Notification";
 import { uiActions } from "../store/uiSlice";
 import { sendCartData } from "../store/cartSlice";
+import Layout from "../components/Layout";
 let isFirstRender = true;
 export default function Home({}) {
     const dispatch = useDispatch();
@@ -20,14 +21,18 @@ export default function Home({}) {
         dispatch(sendCartData(cart));
     }, [cart, dispatch]);
     return (
-        <>
+        <Layout>
+            <h3>
+                TODO: include keywords in the strapi backend to help with seo
+                optimization
+            </h3>
             {notification && (
                 <Notification
                     type={notification.type}
                     message={notification.message}
                 />
             )}{" "}
-        </>
+        </Layout>
     );
 }
 
