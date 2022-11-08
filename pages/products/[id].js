@@ -3,7 +3,6 @@ import { fromImageToUrl, API_URL } from "../../utils/urls";
 import { toTwoDP } from "../../utils/format";
 import styles from "./ProductsDetailsPage.module.css";
 import Layout from "../../components/Layout";
-
 const Product = ({ product }) => {
     return (
         <Layout
@@ -23,30 +22,23 @@ const Product = ({ product }) => {
                             />
                         </div>
                     </div>
-                    <div className={styles.detailsSection}>
-                        <h3 className={styles.productName}>
-                            {product.data.attributes.productName}
-                        </h3>
-                        <p className={styles.price}>
-                            ₦{toTwoDP(product.data.attributes.price)}
-                        </p>
-                        <p className={styles.content}>
-                            {product.data.attributes.content}
-                        </p>
-                        <button
-                            style={{
-                                background: "var(--primaryPurple)",
-                                padding: "15px 25px",
-                                color: "var(--primaryWhite)",
-                                border: "none",
-                                width: "60%",
-                                borderRadius: "3px",
-                                fontSize:'1.8rem'
-                            }}
-                        >
-                            {" "}
-                            Add To Cart
-                        </button>
+                    <div className={styles.detailsSectionContainer}>
+                        <div className={styles.detailsSection}>
+                            <h3 className={styles.productName}>
+                                {product.data.attributes.productName}
+                            </h3>
+                            <p className={styles.content}>
+                                {product.data.attributes.content}
+                            </p>
+                            <p className={styles.price}>
+                                ₦{toTwoDP(product.data.attributes.price)}
+                            </p>
+
+                            <button className={styles.addButton}>
+                                {" "}
+                                Add To Cart
+                            </button>
+                        </div>{" "}
                     </div>
                 </div>
             </div>

@@ -44,8 +44,8 @@ h6 {
     font-family: "Playfair Display", serif;
     /* font-weight: bold; */
 }
-/* 
-@media (prefers-color-scheme: dark) {
+
+/* @media (prefers-color-scheme: dark) {
     html {
         color-scheme: dark;
     }
@@ -91,6 +91,7 @@ footer {
     background-color: var(--primaryWhite);
     color: var(--primaryPurple);
     display: flex;
+    flex-shrink: 0;
     justify-content: center;
     align-items: center;
     width: 100%;

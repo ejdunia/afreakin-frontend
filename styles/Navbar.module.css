@@ -18,6 +18,7 @@
     flex-shrink: 1;
     font-weight: 500;
     list-style-type: none;
+    /* overflow: scroll; */
 }
 
 .PrimaryNav li:hover {
