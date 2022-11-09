@@ -87,7 +87,7 @@ nav .logo {
 } */
 
 footer {
-    height: 10rem;
+    height: 6rem;
     background-color: var(--primaryWhite);
     color: var(--primaryPurple);
     display: flex;

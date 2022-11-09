@@ -5,16 +5,18 @@
     margin: 0;
     gap: var(--gap, 2rem);
 }
+
 .header {
     background-color: rgb(49, 131, 169);
     width: 100vw;
+    /* height: 60rem; */
     align-items: center;
     background-color: var(--primaryWhite);
     justify-content: space-between;
 }
 
 .PrimaryNav {
-    padding: 0px 2rem;
+    padding: 0px 4rem;
     flex-shrink: 1;
     font-weight: 500;
     list-style-type: none;
@@ -28,7 +30,7 @@
 .PrimaryNav a {
     color: var(--primaryPurple);
     margin-left: 12px;
-    font-size: 1.1em;
+    font-size: 1.2rem;
 }
 .PrimaryNav a:hover {
     color: var(--primaryBlack);
@@ -36,9 +38,9 @@
 }
 .logo {
     /* margin-right: auto; */
-    border: 2px solid rebeccapurple;
+    /* border: 2px solid rebeccapurple; */
     /* width: 100%; */
-    margin: 2rem;
+    margin-left: 1.6rem;
     /* height: 50px; */
 }
 .mobileToggle {
@@ -46,7 +48,7 @@
     border: none;
 }
 
-@media (max-width: 764px) {
+@media (max-width: 964px) {
     .PrimaryNav {
         position: fixed;
         flex-direction: column;
@@ -55,8 +57,9 @@
         padding: min(30vh, 15rem) 2em;
         inset: 0 0 0 25%;
         /* background: rgba(108, 82, 124, 0.2); */
+        overflow: scroll;
         background: var(--fadedPurple);
-        --gap: 3em;
+        --gap: 2em;
         z-index: 10;
         transform: translateX(100%);
         transition: all 0.5s ease-out;
@@ -74,17 +77,11 @@
         background: red;
         width: 3rem;
         aspect-ratio: 1;
-        top: 2rem;
-        right: 2rem;
+        top: 1rem;
+        right: 1rem;
         z-index: 20;
     }
     .mobileToggle[aria-expanded="true"] {
         background: greenyellow;
-    }
-}
-
-@supports (backdrop-filter: blur()) {
-    .PrimaryNav {
-        backdrop-filter: blur(1rem);
     }
 }

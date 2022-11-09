@@ -1,18 +1,21 @@
 .image {
     position: relative;
-    object-fit: cover;
-    height: 66rem;
-    width: 57rem;
+    object-fit: contain;
+    height: 65vh;
+    width: 35vw;
 }
 .mainContainer {
     display: flex;
     justify-content: center;
     flex-grow: 1;
+    margin-top: 1.5rem;
+    /* border: 2px solid saddlebrown; */
+    padding: 0rem 4rem;
 }
 .imageContainer {
     border-radius: 10px;
     overflow: hidden;
-    box-shadow: #af14f230 0px 3px 8px, var(--fadedPurple) 0px 1px 2px;
+    box-shadow: #d4c0dc30 0px 3px 8px, var(--fadedPurple) 0px 1px 2px;
     flex-shrink: 1;
 }
 
@@ -26,6 +29,8 @@
 }
 
 .detailsSectionContainer {
+    /* border: 2px solid saddlebrown; */
+
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -35,10 +40,10 @@
     margin: 3rem;
     padding: 1rem;
     align-items: center;
-    width: 30rem;
+    width: 50vw;
     max-width: 80rem;
     height: max-content;
-    height: 66rem;
+    height: 69vh;
     box-shadow: #d17bf630 0px 0px 5px, var(--primaryPurple) 0px 0px 0px;
 }
 
@@ -61,25 +66,25 @@
     width: 70%;
     min-width: 6rem;
     border-radius: 3px;
-    font-size: 1.9rem;
+    font-size: 1.6rem;
     align-self: center;
 }
 .addButton:hover {
     box-shadow: #c038fa30 0px 10px 20px, var(--primaryPurple) 0px 0px 5px;
-    font-size: 2rem;
+    font-size: 1.72rem;
 }
 
 .productName {
-    font-size: 3.65rem;
+    font-size: 3.5rem;
     text-align: center;
 }
 .price {
-    font-size: 2.3rem;
+    font-size: 2rem;
     text-align: left;
     font-weight: 600;
 }
 .content {
-    font-size: 2.2rem;
+    font-size: 2rem;
 }
 
 @media (max-width: 958px) {
@@ -89,13 +94,16 @@
     }
     .detailsSectionContainer {
         height: fit-content;
-        width: 85vw;
+        width: 65vw;
         padding: 1rem;
-        margin: 1rem;
+        margin: 3rem;
+    }
+    .mainContainer {
+        padding: 0;
     }
 }
 @media (min-width: 1020px) {
     .detailsSection {
-        padding: 4rem;
+        padding: 3rem;
     }
 }

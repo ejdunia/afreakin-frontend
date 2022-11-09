@@ -70,11 +70,11 @@ const Navbar = () => {
                                     onClick={() =>
                                         console.log("cart icon clicked")
                                     }
-                                    sx={{ fontSize: "3rem", color: "#31093e" }}
+                                    sx={{ fontSize: "2rem", color: "#31093e" }}
                                 >
                                     <ShoppingCartIcon
                                         sx={{
-                                            fontSize: "3rem",
+                                            fontSize: "2rem",
                                             color: "#31093e",
                                         }}
                                     />

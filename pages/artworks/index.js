@@ -13,75 +13,76 @@ import Layout from "../../components/Layout";
 export default function Artworks({ artworks }) {
     return (
         <Layout>
-            <div className={styles.gallerybg}>
+            <div className={styles.gallery}>
                 <Head>
                     <title>Artworks</title>
                     <meta name="description" content="Afreakin Art Gallery" />
                     <link rel="icon" href="/favicon.ico" />
                 </Head>
-                <div className={styles.gallery}>
-                    <Swiper
-                        className={styles.swiperContainer}
-                        spaceBetween={100}
-                        centeredSlides={true}
-                        loop={true}
-                        slidesPerView={"auto"}
-                        breakpoints={{
-                            640: {
-                                slidesPerView: 1,
-                                spaceBetween: 20,
-                            },
-                            800: {
-                                slidesPerView: 2,
-                                spaceBetween: 20,
-                            },
-                        }}
-                        // autoplay to be in the homepage for mobile scroll
-                        // autoplay={{
-                        //     delay: 500,
-                        //     disableOnInteraction: true,
-                        // }}
-                        pagination={{
-                            clickable: true,
-                        }}
-                        keyboard={{ enabled: true }}
-                        navigation={true}
-                        mousewheel={true}
-                        // onSlideChange={() => console.log("slide change")}
-                        // onSwiper={(swiper) => console.log(swiper)}
-                        modules={[Mousewheel, Pagination, Autoplay, Navigation]}
-                    >
-                        {/* todo checkout how to move the navigation buttons to the bottom */}
-                        {artworks.data?.map((art) => {
-                            return (
-                                <SwiperSlide
-                                    key={art.id}
-                                    className={styles.artcontainer}
-                                >
-                                    <Link href={`/artworks/${art.id}`}>
-                                        <div className={styles.art}>
-                                            <a className={styles.anchortag}>
-                                                <Image
-                                                    src={fromImageToUrl(
-                                                        art.attributes.image
-                                                    )}
-                                                    alt={art.attributes.name}
-                                                    width="500px"
-                                                    height="350px"
-                                                    layout="responsive"
-                                                    objectFit="contain"
-                                                />
-                                                <div>
-                                                    {art.attributes.name}{" "}
-                                                </div>
-                                            </a>
-                                        </div>
-                                    </Link>
-                                </SwiperSlide>
-                            );
-                        })}
-                    </Swiper>
-                </div>
+                <Swiper
+                    className={styles.swiperContainer}
+                    spaceBetween={100}
+                    centeredSlides={true}
+                    loop={true}
+                    slidesPerView={"auto"}
+                    breakpoints={{
+                        640: {
+                            slidesPerView: 1,
+                            spaceBetween: 50,
+                        },
+                        800: {
+                            slidesPerView: 2,
+                            spaceBetween: 50,
+                        },
+
+                        900: {
+                            slidesPerView: 2,
+                            spaceBetween: 100,
+                        },
+                        1204: {
+                            slidesPerView: 2,
+                            spaceBetween: 250,
+                        },
+                    }}
+                    // autoplay to be in the homepage for mobile scroll
+                    // autoplay={{
+                    //     delay: 500,
+                    //     disableOnInteraction: true,
+                    // }}
+                    pagination={{
+                        clickable: true,
+                    }}
+                    navigation={true}
+                    mousewheel={true}
+                    modules={[Mousewheel, Pagination, Autoplay, Navigation]}
+                >
+                    {/* todo checkout how to move the navigation buttons to the bottom */}
+                    {artworks.data?.map((art) => {
+                        return (
+                            <SwiperSlide
+                                key={art.id}
+                                className={styles.swiperSlide}
+                            >
+                                <Link href={`/artworks/${art.id}`}>
+                                    <div className={styles.artContainer}>
+                                        <a className={styles.art}>
+                                            <Image
+                                                src={fromImageToUrl(
+                                                    art.attributes.image
+                                                )}
+                                                alt={art.attributes.Title}
+                                                layout="fill"
+                                            />
+                                        </a>
+                                        <p className={styles.details}>
+                                            {art.attributes.Title}
+                                        </p>
+                                    </div>
+                                </Link>
+                            </SwiperSlide>
+                        );
+                    })}
+                </Swiper>
             </div>
         </Layout>
     );
