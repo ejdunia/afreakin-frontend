@@ -29,14 +29,10 @@
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    /* border: 2px solid violet; */
-    /* background-color: white; */
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 .artContainer:hover {
     background-color: aliceblue;
-    /* padding: 10px; */
-    /* margin-bottom: 20px; */
     transition: all 0.5s ease-out;
 }
 
@@ -47,7 +43,6 @@
     align-items: center;
     position: relative;
     border-radius: 20px;
-    /* border: 2px solid rgb(58, 5, 58); */
 }
 .art {
     display: block;
@@ -61,18 +56,14 @@
 .art:hover {
     transform: scale(0.97);
     transition: all 0.5s ease-out;
-    /* margin-bottom: 20px; */
     padding: 40px;
 }
 
 .details {
-    /* position: sticky; */
-    /* z-index: 1; */
     align-self: center;
     bottom: 0px;
     left: 30px;
     font-size: 3rem;
-    /* background-color: antiquewhite; */
 }
 @media (max-width: 958px) {
     .artContainer {
