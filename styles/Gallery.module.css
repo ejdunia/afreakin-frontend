@@ -19,7 +19,9 @@
     height: 100%;
     width: 100vw;
 }
-
+.image {
+    object-fit: contain;
+}
 .artContainer {
     position: relative;
     height: 100%;
@@ -29,11 +31,6 @@
     display: flex;
     flex-direction: column;
     border-radius: 20px;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-}
-.artContainer:hover {
-    background-color: aliceblue;
-    transition: all 0.5s ease-out;
 }
 
 .swiperSlide {
@@ -44,36 +41,49 @@
     position: relative;
     border-radius: 20px;
 }
+
 .art {
     display: block;
+    position: relative;
     box-sizing: border-box;
-    z-index: 3;
     height: 100%;
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
+
 .art:hover {
-    transform: scale(0.97);
-    transition: all 0.5s ease-out;
-    padding: 40px;
+    transform: scale(1.1);
+    transition: all 1s ease;
+    font-size: 4.5rem;
+    filter: blur(1px) saturate(70%) brightness(0.5);
+    cursor: pointer;
+}
+.artContainer:hover > * {
+    display: block;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 600;
+    text-align: center;
 }
 
 .details {
+    display: none;
+    position: absolute;
     align-self: center;
-    bottom: 0px;
-    left: 30px;
-    font-size: 3rem;
+    top: 40%;
+    color: var(--primaryWhite);
+    transition: all 3s;
 }
+
 @media (max-width: 958px) {
     .artContainer {
         width: 80vw;
-        height: 60vh;
     }
 }
 @media (max-height: 367px) {
     .artContainer {
-        width: auto;
         width: 50rem;
         height: 70vh;
     }

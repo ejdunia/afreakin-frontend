@@ -72,11 +72,14 @@ export default function Artworks({ artworks }) {
                                                 )}
                                                 alt={art.attributes.Title}
                                                 layout="fill"
+                                                className={styles.image}
                                             />
                                         </a>
-                                        <p className={styles.details}>
-                                            {art.attributes.Title}
-                                        </p>
+                                        <div className={styles.details}>
+                                            <p className={styles.title}>
+                                                {art.attributes.Title}
+                                            </p>
+                                        </div>
                                     </div>
                                 </Link>
                             </SwiperSlide>

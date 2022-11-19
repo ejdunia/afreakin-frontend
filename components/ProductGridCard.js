@@ -21,18 +21,18 @@ const ProductCard = ({ product }) => {
     };
 
     return (
-        <Card sx={{ maxWidth: "auto" }} elevation={1}>
+        <Card sx={{ maxWidth: "30rem" }} elevation={1}>
             <CardActionArea>
                 <Link href={`/products/${product.id}`}>
                     <a>
                         <CardMedia>
                             <Image
                                 src={fromImageToUrl(product.attributes.image)}
-                                alt="image"
-                                width="100%"
-                                height="100%"
+                                alt={product.attributes.name}
+                                width="7rem"
+                                height="7rem"
                                 layout="responsive"
-                                // objectFit="cover"
+                                objectFit="cover"
                                 // change objectFit to contain on hover
                             />
                         </CardMedia>
@@ -40,8 +40,8 @@ const ProductCard = ({ product }) => {
                             title={
                                 <Typography
                                     noWrap
-                                    fontSize="2.5rem"
-                                    display="inline-block"
+                                    fontSize="2rem"
+                                    // display="inline-block"
                                 >
                                     {product.attributes.productName}
                                 </Typography>
@@ -57,10 +57,10 @@ const ProductCard = ({ product }) => {
             </CardActionArea>
             <CardActions>
                 <IconButton aria-label="cart" onClick={addToCart}>
-                    <ShoppingCartIcon sx={{ fontSize: "3rem" }} />
+                    <ShoppingCartIcon sx={{ fontSize: "2.5rem" }} />
                 </IconButton>
                 <IconButton aria-label="share">
-                    <ShareIcon sx={{ fontSize: "3rem" }} />
+                    <ShareIcon sx={{ fontSize: "2.5rem" }} />
                 </IconButton>
             </CardActions>
         </Card>

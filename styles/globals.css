@@ -5,6 +5,7 @@
     --primaryWhite: #f3f4f6;
     --primaryBlack: #0f172a;
     --fadedPurple: #dcbdfd;
+    transition: all 1.5s linear;
 }
 html,
 body {
@@ -18,6 +19,7 @@ body {
 body::-webkit-scrollbar {
     width: 0.3rem;
 }
+
 body::-webkit-scrollbar-track {
     background: var(--fadedPurple);
 }
@@ -42,7 +44,6 @@ h4,
 h5,
 h6 {
     font-family: "Playfair Display", serif;
-    /* font-weight: bold; */
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -62,29 +63,6 @@ h6 {
     flex-direction: column;
     justify-content: space-between;
 }
-
-/* nav ul {
-    padding: 0px 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-    outline: 3px solid rgb(178, 9, 9);
-    color: var(--primaryPurple);
-    font-size: 1.3rem;
-    font-weight: 600;
-    background-color: var(--primaryWhite);
-    backdrop-filter: blur(8px);
-    width: 100vw;
-}
-nav a {
-    margin-left: 12px;
-    font-size: 1.5rem;
-}
-nav .logo {
-    margin-right: auto;
-    border: 1px solid rebeccapurple;
-} */
 
 footer {
     height: 6rem;

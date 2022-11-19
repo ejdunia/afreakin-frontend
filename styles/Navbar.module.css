@@ -9,7 +9,8 @@
 .header {
     background-color: rgb(49, 131, 169);
     width: 100vw;
-    /* height: 60rem; */
+    padding: 10px;
+    box-sizing: border-box;
     align-items: center;
     background-color: var(--primaryWhite);
     justify-content: space-between;
@@ -20,7 +21,6 @@
     flex-shrink: 1;
     font-weight: 500;
     list-style-type: none;
-    /* overflow: scroll; */
 }
 
 .PrimaryNav li:hover {
@@ -36,30 +36,35 @@
     color: var(--primaryBlack);
     border-bottom: 1.7px solid var(--fadedPurple);
 }
+
 .logo {
-    /* margin-right: auto; */
-    /* border: 2px solid rebeccapurple; */
-    /* width: 100%; */
-    margin-left: 1.6rem;
-    /* height: 50px; */
+    margin-left: 1.8rem;
 }
 .mobileToggle {
     display: none;
     border: none;
 }
 
+@media (min-width: 964px) {
+    .header {
+        padding: 0;
+    }
+}
 @media (max-width: 964px) {
     .PrimaryNav {
         position: fixed;
         flex-direction: column;
-        /* justify-content: space-evenly; */
+        justify-content: space-evenly;
+        height: 100vh;
+        justify-content: space-between;
         align-items: flex-end;
-        padding: min(30vh, 15rem) 2em;
+        padding: min(40vh, 25rem) 7rem;
         inset: 0 0 0 25%;
-        /* background: rgba(108, 82, 124, 0.2); */
         overflow: scroll;
-        background: var(--fadedPurple);
-        --gap: 2em;
+        /* background: var(--fadedPurple); */
+        /* color: aliceblue; */
+        background-color: black;
+        opacity: 90%;
         z-index: 10;
         transform: translateX(100%);
         transition: all 0.5s ease-out;
@@ -68,20 +73,22 @@
         transform: translateX(0%);
     }
     .PrimaryNav a {
+        color: var(--primaryWhite);
+
         font-size: 2rem;
         font-weight: 500;
     }
     .mobileToggle {
         display: block;
         position: absolute;
-        background: red;
+        background: rgb(115, 27, 177);
         width: 3rem;
         aspect-ratio: 1;
-        top: 1rem;
-        right: 1rem;
+        top: 15px;
+        right: 15px;
         z-index: 20;
     }
     .mobileToggle[aria-expanded="true"] {
-        background: greenyellow;
+        background: rgb(30, 20, 162);
     }
 }
