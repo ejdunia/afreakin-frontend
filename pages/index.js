@@ -45,6 +45,10 @@ export default function Home({}) {
                                     </p>
                                 </div>
                             </div>
+                            <div className={styles.bannerImageContainer}>
+                                <div className={styles.bannerImage1}></div>
+                                <div className={styles.bannerImage2}></div>
+                            </div>
                         </div>
                     </div>
                 </div>
