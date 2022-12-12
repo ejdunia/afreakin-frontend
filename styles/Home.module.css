@@ -1,0 +1,74 @@
+.borderRed {
+    border: 2px solid red;
+}
+
+.borderGreen {
+    border: 2px solid green;
+}
+
+.container {
+    min-width: 300px;
+    width: min(1440px, 90vw);
+    /* border: 2px solid var(--primaryPurple); */
+    min-height: 100vh;
+    margin: auto;
+    padding: 20px;
+    background: var(--primaryWhite);
+    backdrop-filter: blur(40px);
+}
+.background {
+    background: url("../public/gal_bg1.jpeg");
+}
+.banner {
+    border: 2px solid red;
+
+    display: flex;
+}
+.blur {
+    backdrop-filter: blur(2px);
+}
+.headerTitle {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    font-size: 4rem;
+    display: inline-block;
+    /* border: 2px solid rgb(17, 7, 94); */
+    font-weight: 600;
+}
+.headerText {
+    font-size: 7rem;
+    border: 2px solid rgb(17, 7, 94);
+    margin: 8px;
+    padding: 5px;
+    box-sizing: border-box;
+    z-index: 2;
+    background-color: var(--primaryWhite);
+}
+
+.headerContainer {
+    border: 2px solid rgb(9, 11, 11);
+    display: flex;
+    padding: 9px;
+    width: 300px;
+}
+.headerQuote {
+    font-size: 2.5rem;
+    z-index: 2;
+    background-color: var(--primaryWhite);
+}
+@media (max-width: 658px) {
+    .headerText {
+        font-size: 5rem;
+        font-weight: 300;
+    }
+    .container {
+        padding: 5px;
+    }
+
+    .headerTitle {
+        font-size: 3rem;
+        font-weight: 600;
+        padding: 10px;
+        margin: 0;
+    }
+}

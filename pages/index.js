@@ -8,30 +8,47 @@ import Notification from "../components/Notification";
 import { uiActions } from "../store/uiSlice";
 import { sendCartData } from "../store/cartSlice";
 import Layout from "../components/Layout";
-let isFirstRender = true;
+import styles from "@/styles/Home.module.css";
+
+// let isFirstRender = true;
 export default function Home({}) {
-    const dispatch = useDispatch();
-    const notification = useSelector((state) => state.ui.notification);
-    const cart = useSelector((state) => state.cart);
-    useEffect(() => {
-        if (isFirstRender) {
-            isFirstRender = false;
-            return;
-        }
-        dispatch(sendCartData(cart));
-    }, [cart, dispatch]);
+    // const dispatch = useDispatch(dispatch = useDispatch();
+    // const notification = useSelector((state) => state.ui.notification);
+    // const cart );
+    // const notification = useSelector((state) => state.ui.notification);
+    // const cart = useSelector((state) => state.cart);
+    // useEffect(() => {
+    //     if (isFirstRender) {
+    //         isFirstRender = false;
+    //         return;
+    //     }
+    //     dispatch(sendCartData(cart));
+    // }, [cart, dispatch]);
     return (
         <Layout>
-            <h3>
-                TODO: include keywords in the strapi backend to help with seo
-                optimization
-            </h3>
-            {notification && (
-                <Notification
-                    type={notification.type}
-                    message={notification.message}
-                />
-            )}{" "}
+            <div className={styles.background}>
+                <div className={styles.blur}>
+                    <div className={styles.container}>
+                        <div className={styles.banner}>
+                            <div className={styles.headerContainer}>
+                                <h1 className={styles.headerTitle}>AFREAKIN</h1>
+                                <div>
+                                    <p className={styles.headerText}>
+                                        Tribe for the creative
+                                    </p>
+                                    <p className={styles.headerQuote}>
+                                        <q style={{ fontSize: "1.7rem" }}>
+                                            ...believing deeply in the power of
+                                            art to inspire future generations
+                                        </q>{" "}
+                                        - Virgil Abloh
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </Layout>
     );
 }
@@ -44,4 +61,14 @@ export async function getStaticProps() {
     return {
         props: { products },
     };
+}
+
+// put the below for the notification from firebase inbetween the layout tag
+{
+    /* {notification && (
+                <Notification
+                    type={notification.type}
+                    message={notification.message}
+                />
+            )}{" "} */
 }

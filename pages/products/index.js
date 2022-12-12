@@ -1,10 +1,9 @@
-import Head from "next/head";
-import styles from "../../styles/Home.module.css";
+// import Head from "next/head";
 import { API_URL } from "../../utils/urls";
 import { Grid, Container } from "@mui/material";
 import ProductCard from "../../components/ProductGridCard";
 import { useSelector } from "react-redux";
-import Layout from "../../components/Layout";
+import Layout from "@/components/Layout";
 
 export default function ProductsPage({ products }) {
     const cartItems = useSelector((state) => state.cart.itemsList);
@@ -15,7 +14,7 @@ export default function ProductsPage({ products }) {
                 "online store, apparel, street-wear, fashion, art, jean jackets, custom merc"
             }
         >
-            <div className={styles.container}>
+            <div>
                 <h1>Products</h1>
                 <Container>
                     <Grid
@@ -52,5 +51,6 @@ export async function getStaticProps() {
     // return the data as props
     return {
         props: { products },
+        revalidate: 1,
     };
 }

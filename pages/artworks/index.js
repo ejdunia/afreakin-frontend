@@ -7,8 +7,8 @@ import { Mousewheel, Autoplay, Navigation, Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import styles from "../../styles/Gallery.module.css";
-import Layout from "../../components/Layout";
+import styles from "@/styles/Gallery.module.css";
+import Layout from "@/components/Layout";
 
 export default function Artworks({ artworks }) {
     return (
@@ -56,7 +56,6 @@ export default function Artworks({ artworks }) {
                     mousewheel={true}
                     modules={[Mousewheel, Pagination, Autoplay, Navigation]}
                 >
-                    {/* todo checkout how to move the navigation buttons to the bottom */}
                     {artworks.data?.map((art) => {
                         return (
                             <SwiperSlide
