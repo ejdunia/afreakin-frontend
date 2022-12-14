@@ -66,8 +66,8 @@ h6 {
 
 footer {
     height: 6rem;
-    background-color: var(--primaryWhite);
-    color: var(--primaryPurple);
+    background-color: var(--primaryPurple);
+    color: var(--primaryWhite);
     display: flex;
     flex-shrink: 0;
     justify-content: center;

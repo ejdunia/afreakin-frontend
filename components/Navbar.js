@@ -4,6 +4,8 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { IconButton } from "@mui/material";
 import { useSelector } from "react-redux";
 import styles from "../styles/Navbar.module.css";
+import AFlogo from "../public/vercel.svg";
+import Image from "next/image";
 const Navbar = () => {
     const [visible, setVisible] = useState(false);
     const quantity = useSelector((state) => state.cart.totalQuantity);
@@ -13,7 +15,7 @@ const Navbar = () => {
     return (
         <header className={`${styles.flex} ${styles.header}`}>
             <div className={styles.logo}>
-                <h1>afreakin logo</h1>
+                <Image src={AFlogo} fill alt="logo" />
             </div>
             <button
                 aria-controls="primaryNav"

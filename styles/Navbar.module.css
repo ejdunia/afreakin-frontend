@@ -4,12 +4,10 @@
     padding: 0;
     margin: 0;
     gap: var(--gap, 2rem);
-} 
-
+}
 
 .header {
-    background-color: rgb(49, 131, 169);
-    width: 100vw;
+    /* width: 100vw; */
     padding: 10px;
     box-sizing: border-box;
     align-items: center;
@@ -39,7 +37,10 @@
 }
 
 .logo {
-    margin-left: 1.8rem;
+    margin-left: 2.8rem;
+    width: 9rem;
+    /* height: 300px; */
+    /* border: 2px solid red; */
 }
 .mobileToggle {
     display: none;
@@ -62,8 +63,6 @@
         padding: min(40vh, 25rem) 7rem;
         inset: 0 0 0 25%;
         overflow: scroll;
-        /* background: var(--fadedPurple); */
-        /* color: aliceblue; */
         background-color: black;
         opacity: 90%;
         z-index: 10;

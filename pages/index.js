@@ -9,7 +9,8 @@ import { uiActions } from "../store/uiSlice";
 import { sendCartData } from "../store/cartSlice";
 import Layout from "../components/Layout";
 import styles from "@/styles/Home.module.css";
-
+import sampleImage from "../public/jokerjj.jpg";
+import contactBG from "../public/BWbg.jpg"
 // let isFirstRender = true;
 export default function Home({}) {
     // const dispatch = useDispatch(dispatch = useDispatch();
@@ -28,10 +29,18 @@ export default function Home({}) {
         <Layout>
             <div className={styles.background}>
                 <div className={styles.blur}>
-                    <div className={styles.container}>
-                        <div className={styles.banner}>
-                            <div className={styles.headerContainer}>
-                                <h1 className={styles.headerTitle}>AFREAKIN</h1>
+                    <div
+                        className={`${styles.container} ${styles.flexCol} ${styles.flex}`}
+                    >
+                        <div className={`${styles.banner} ${styles.flex}`}>
+                            <div
+                                className={`${styles.flex} ${styles.headerContainer}`}
+                            >
+                                <h1
+                                    className={`${styles.largeHeaderText} ${styles.verticalText}`}
+                                >
+                                    AFREAKIN
+                                </h1>
                                 <div>
                                     <p className={styles.headerText}>
                                         Tribe for the creative
@@ -50,6 +59,150 @@ export default function Home({}) {
                                 <div className={styles.bannerImage2}></div>
                             </div>
                         </div>
+                        <section
+                            className={`${styles.section} ${styles.flexCol} ${styles.flexCenter}`}
+                        >
+                            <h2 className={styles.titleFont}>WHAT WE DO</h2>
+
+                            <div className={styles.invertContainer}>
+                                <div className={`${styles.whatWeDoItem}`}>
+                                    <div
+                                        className={`${styles.flex} ${styles.flexCenter} ${styles.WWDTextContainer}`}
+                                    >
+                                        <h3
+                                            className={`${styles.verticalText} ${styles.largeHeaderText}`}
+                                        >
+                                            NIGGUS
+                                        </h3>{" "}
+                                        <div className={styles.WWDText}>
+                                            <p className={styles.midHeaderText}>
+                                                Our Fashion Brand for street
+                                                apparel.
+                                                <br /> Designed and Customised
+                                                with art by Us and for You
+                                            </p>
+                                            <button
+                                                className={
+                                                    styles.discoverMoreButton
+                                                }
+                                            >
+                                                DISCOVER
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className={styles.WWDImage}>
+                                        <Image
+                                            src={sampleImage}
+                                            layout="fill"
+                                            alt="sample image"
+                                        />
+                                    </div>
+                                </div>{" "}
+                                <div className={`${styles.whatWeDoItem}`}>
+                                    <div
+                                        className={`${styles.flex} ${styles.flexCenter} ${styles.WWDTextContainer}`}
+                                    >
+                                        <h3
+                                            className={`${styles.verticalText} ${styles.largeHeaderText}`}
+                                        >
+                                            ART
+                                        </h3>{" "}
+                                        <div className={styles.WWDText}>
+                                            <p className={styles.midHeaderText}>
+                                                Some text about art.
+                                                <br /> Designed and Customised
+                                                with art by Us and for You
+                                            </p>
+                                            <button
+                                                className={
+                                                    styles.discoverMoreButton
+                                                }
+                                            >
+                                                DISCOVER
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className={styles.WWDImage}>
+                                        <Image
+                                            src={sampleImage}
+                                            layout="fill"
+                                            alt="sample image"
+                                        />
+                                    </div>
+                                </div>{" "}
+                                <div className={`${styles.whatWeDoItem}`}>
+                                    <div
+                                        className={`${styles.flex} ${styles.flexCenter} ${styles.WWDTextContainer}`}
+                                    >
+                                        <div className={styles.stopCollapse}>
+                                            <h3
+                                                className={`${styles.verticalText} ${styles.largeHeaderText}`}
+                                            >
+                                                CUSTOM APPAREL
+                                            </h3>{" "}
+                                        </div>
+                                        <div className={styles.WWDText}>
+                                            <p className={styles.midHeaderText}>
+                                                Our Fashion Brand for street
+                                                apparel.
+                                                <br /> Designed and Customised
+                                                with art by Us and for You
+                                            </p>
+                                            <button
+                                                className={
+                                                    styles.discoverMoreButton
+                                                }
+                                            >
+                                                DISCOVER
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className={styles.WWDImage}>
+                                        <Image
+                                            src={sampleImage}
+                                            layout="fill"
+                                            alt="sample image"
+                                        />
+                                    </div>
+                                </div>{" "}
+                                <div className={`${styles.whatWeDoItem}`}>
+                                    <div
+                                        className={`${styles.flex} ${styles.flexCenter} ${styles.WWDTextContainer}`}
+                                    >
+                                        <h3
+                                            className={`${styles.verticalText} ${styles.largeHeaderText}`}
+                                        >
+                                            DIGITAL CONTENT
+                                        </h3>{" "}
+                                        <div className={styles.WWDText}>
+                                            <p className={styles.midHeaderText}>
+                                                Our Fashion Brand for street
+                                                apparel.
+                                                <br /> Designed and Customised
+                                                with art by Us and for You
+                                            </p>
+                                            <button
+                                                className={
+                                                    styles.discoverMoreButton
+                                                }
+                                            >
+                                                DISCOVER
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div className={styles.WWDImage}>
+                                        <Image
+                                            src={sampleImage}
+                                            layout="fill"
+                                            alt="sample image"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <section className={styles.contactContainer}>
+
+                        </section>
                     </div>
                 </div>
             </div>
