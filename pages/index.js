@@ -9,8 +9,16 @@ import { uiActions } from "../store/uiSlice";
 import { sendCartData } from "../store/cartSlice";
 import Layout from "../components/Layout";
 import styles from "@/styles/Home.module.css";
-import sampleImage from "../public/jokerjj.jpg";
-import contactBG from "../public/BWbg.jpg"
+import sampleImage from "../public/jacket.png";
+import contactBG from "../public/BWbg.jpg";
+import { useState } from "react";
+import ContactForm from "@/components/ContactForm";
+
+import InstagramIcon from "@mui/icons-material/Instagram";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import EmailIcon from "@mui/icons-material/Email";
+
 // let isFirstRender = true;
 export default function Home({}) {
     // const dispatch = useDispatch(dispatch = useDispatch();
@@ -25,6 +33,7 @@ export default function Home({}) {
     //     }
     //     dispatch(sendCartData(cart));
     // }, [cart, dispatch]);
+
     return (
         <Layout>
             <div className={styles.background}>
@@ -130,41 +139,7 @@ export default function Home({}) {
                                         />
                                     </div>
                                 </div>{" "}
-                                <div className={`${styles.whatWeDoItem}`}>
-                                    <div
-                                        className={`${styles.flex} ${styles.flexCenter} ${styles.WWDTextContainer}`}
-                                    >
-                                        <div className={styles.stopCollapse}>
-                                            <h3
-                                                className={`${styles.verticalText} ${styles.largeHeaderText}`}
-                                            >
-                                                CUSTOM APPAREL
-                                            </h3>{" "}
-                                        </div>
-                                        <div className={styles.WWDText}>
-                                            <p className={styles.midHeaderText}>
-                                                Our Fashion Brand for street
-                                                apparel.
-                                                <br /> Designed and Customised
-                                                with art by Us and for You
-                                            </p>
-                                            <button
-                                                className={
-                                                    styles.discoverMoreButton
-                                                }
-                                            >
-                                                DISCOVER
-                                            </button>
-                                        </div>
-                                    </div>
-                                    <div className={styles.WWDImage}>
-                                        <Image
-                                            src={sampleImage}
-                                            layout="fill"
-                                            alt="sample image"
-                                        />
-                                    </div>
-                                </div>{" "}
+                            
                                 <div className={`${styles.whatWeDoItem}`}>
                                     <div
                                         className={`${styles.flex} ${styles.flexCenter} ${styles.WWDTextContainer}`}
@@ -200,8 +175,31 @@ export default function Home({}) {
                                 </div>
                             </div>
                         </section>
-                        <section className={styles.contactContainer}>
-
+                        <section>
+                            <div className={styles.formContainer}>
+                                <div className={styles.LetsTalkCont}>
+                                    <h2 className={styles.titleFont}>
+                                        Lets Talk!
+                                    </h2>
+                                    <p>
+                                        Fill out the form or reach out on our
+                                        social media handles and we{"'"}ll be in
+                                        touch!
+                                    </p>
+                                    <div
+                                        className={styles.socialIconsContainer}
+                                    >
+                                        <div className={styles.iconsContainer}>
+                                            <FacebookIcon />
+                                            <EmailIcon />
+                                            <TwitterIcon />
+                                            <InstagramIcon />
+                                        </div>
+                                    </div>
+                                </div>
+                                <ContactForm />
+                                <div className={styles.social}></div>
+                            </div>
                         </section>
                     </div>
                 </div>

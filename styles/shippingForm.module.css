@@ -1,0 +1,134 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.formContainer {
+    display: flex;
+    flex-direction: column;
+    width: max(35vw, 320px);
+    padding: 10px;
+    box-shadow: 0 1px 2px rgba(213, 197, 197, 0.6);
+    border-radius: 5px;
+}
+
+.formContainer h2 {
+    margin: 0 0 30px;
+    padding: 0;
+    color: var(--primaryPurple);
+    text-align: center;
+}
+.formContainer h1 {
+    color: var(--primaryPurple);
+}
+
+.formContainer .inputBox {
+    position: relative;
+}
+
+.inputBox,
+.textareaContainer {
+    width: 100%;
+}
+
+.formContainer .inputBox input {
+    width: 100%;
+    padding: 10px 0;
+    font-size: 2rem;
+    color: var(--primaryPurple);
+    margin-bottom: 30px;
+    border: none;
+    border-bottom: 1px solid var(--primaryPurple);
+    outline: none;
+    background: transparent;
+}
+
+.formContainer .inputBox label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    font-size: 1.7rem;
+    color: var(--primaryPurple);
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.inputBox input:focus ~ label,
+.inputBox input:valid ~ label {
+    top: -20px;
+    left: 0;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.formHeader {
+    font-size: 5rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    /* border: 2px solid red; */
+    height: max(90vh, 400px);
+    padding: 5px;
+}
+
+.priBtn {
+    appearance: button;
+    background-color: var(--primaryPurple);
+    background-image: none;
+    border: 1px solid #000;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: var(--primaryWhite);
+    cursor: pointer;
+    display: inline-block;
+    font-size: 1.9rem;
+    font-weight: 500;
+    overflow: visible;
+    padding: 12px 20px;
+    text-align: center;
+    text-transform: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    vertical-align: middle;
+    white-space: nowrap;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
+}
+
+.priBtn:hover {
+    scale: 1.04;
+}
+.textareaContainer > * {
+    color: var(--primaryPurple);
+    font-size: 1.7rem;
+}
+
+.textarea {
+    background: transparent;
+    border: none;
+    width: 100%;
+    padding: 10px;
+    font-size: 2rem;
+    border-bottom: 1px solid var(--primaryPurple);
+    margin-bottom: 1rem;
+}
+
+.textarea:focus {
+    outline: none;
+}
+.flex > * {
+    font-size: 2rem;
+}
+.flex {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+}
+.borred {
+    border: 2px solid red;
+}

@@ -13,15 +13,21 @@
 
 .container {
     min-width: 300px;
-    width: min(1440px, 97vw);
+    width: min(1440px, 90vw);
     gap: 20px;
     min-height: 100vh;
     margin: auto;
     background: var(--primaryWhite);
     backdrop-filter: blur(40px);
+    /* border: 2px solid red; */
 }
 .background {
     background: url("../public/gal_bg1.jpeg");
+    /* background-image: url(../public/BWbg.jpg); */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .banner {
     /* border: 2px solid red; */
@@ -45,7 +51,7 @@
 
 .headerText {
     font-size: 7rem;
-    border: 2px solid rgb(17, 7, 94);
+    border: 2px solid var(--primaryPurple);
     margin: 8px;
     padding: 5px;
     box-sizing: border-box;
@@ -64,6 +70,7 @@
 .largeHeaderText {
     font-size: 4rem;
     font-weight: 600;
+    margin: max(5%, 15px);
 }
 .titleFont {
     font-size: 5rem;
@@ -81,14 +88,25 @@
 }
 
 .bannerImage1 {
+    top: 0;
     background: antiquewhite;
+}
+
+.bannerImage2 {
+    bottom: 0;
+    right: 0;
+    background: rgb(182, 107, 9);
+}
+
+.bannerImage1 {
+    background: rgb(250, 227, 215);
 }
 
 .bannerImage2 {
     background: rgb(182, 107, 9);
 }
 .headerContainer {
-    border: 2px solid rgb(9, 11, 11);
+    border: 2px solid var(--primaryPurple);
     padding: 9px;
     width: 300px;
     z-index: 7;
@@ -114,30 +132,39 @@
 }
 .whatWeDoItem {
     display: flex;
-    border: 3px solid cadetblue;
     flex-wrap: wrap;
-    width: 90vw;
-    max-width: 1300px;
-    justify-content: space-around;
-    padding: 20px;
+    max-width: 95vw;
+    padding: 25px;
     gap: 20px;
-    /* flex-direction: row-reverse; */
+    margin: 10px;
 }
 .whatWeDoItem:nth-child(even) {
     flex-direction: row-reverse;
 }
 .whatWeDoItem:nth-child(even) > * {
-    /* background-color: rgb(37, 21, 21); */
     flex-direction: row-reverse;
 }
 .WWDText {
     max-width: 444px;
     padding: 20px;
-    border: 2px dotted var(--primaryPurple);
+}
+.socialIconsContainer {
+    width: 100%;
+}
+
+.iconsContainer {
+    width: 300px;
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+}
+.iconsContainer > * {
+    font-size: 40px;
+    color: var(--primaryPurple);
 }
 .WWDTextContainer {
     height: 450px;
-    /* border: 2px solid blue; */
+    border-bottom: 2px solid var(--primaryPurple);
     width: 35%;
     max-width: 100%;
     flex-grow: 1;
@@ -145,8 +172,6 @@
 }
 .WWDImage {
     position: relative;
-    /* border: 2px solid rgb(13, 182, 120); */
-    background: rgb(228, 144, 10);
     height: 450px;
     width: 450px;
 }
@@ -154,22 +179,42 @@
 .contactContainer {
     display: flex;
     flex-grow: 1;
-    height: 1000px;
-    width: 100%;
-    background: #000;
     min-height: 500px;
+}
+
+.LetsTalkCont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    min-height: 450px;
+    flex-grow: 1;
+    padding: 30px;
+    background: var(--primaryWhite);
+}
+
+.LetsTalkCont p {
+    font-size: 2rem;
+}
+.formContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     background-image: url(../public/BWbg.jpg);
-    filter: blur(2px);
-    -webkit-filter: blur(3px);
-    /* Create the parallax scrolling effect */
+    /* padding: 15px; */
+    width: 100%;
+    /* border: 3px solid rgb(20, 55, 38); */
+    backdrop-filter: blur(3px);
+
+    /* parallax */
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
 }
-.discoverMoreButton {
-    border: none;
-}
+
 .discoverMoreButton {
     appearance: button;
     background-color: var(--primaryPurple);
@@ -191,19 +236,12 @@
     -webkit-user-select: none;
     vertical-align: middle;
     white-space: nowrap;
-}
-
-.discoverMoreButton:focus {
-    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.6);
 }
 
 .discoverMoreButton:hover {
-    text-decoration: none;
-}
-
-
-.discoverMoreButton:not([disabled]):active {
-    transform: translate(3px, 3px);
+    scale: 1.04;
+    /* box-shadow: none */
 }
 
 @media (max-width: 558px) {
@@ -213,6 +251,7 @@
     }
     .container {
         padding: 5px;
+        width: 100vw;
     }
 
     .headerTitle {
