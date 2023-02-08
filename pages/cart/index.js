@@ -41,7 +41,7 @@ const Cart = () => {
                 <div className={styles.container2}>
                 {/* refactor the cart to a component */}
                     {isCartEmpty(total) ? (
-                        <h1> No items in cart </h1>
+                        <h1 className={styles.largeHeaderText}> No items in cart </h1>
                     ) : (
                         <div className={`${styles.cartItemsContainer} `}>
                             {cartItems.map((cartItem) => (

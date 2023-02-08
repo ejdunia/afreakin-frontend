@@ -6,14 +6,14 @@ const ShippingForm = () => {
     const [fName, setFname] = useState("");
     const [email, setEmail] = useState("");
     const [phone, setPhone] = useState(null);
-    const [country, setCountry] = useState("Nigeria");
-    const [state, setState] = useState("Abuja");
+    // const [country, setCountry] = useState("Nigeria");
+    const [region, setRegion] = useState("Abuja");
     const [address, setAddress] = useState("");
     const [message, setMessage] = useState("");
 
     const handleUpdate = (e) => {
         e.preventDefault();
-        alert(`${fName}, ${email} , ${message} `);
+        alert(`${fName}, ${email} ,${region}, ${message} `);
     };
 
     const handleStateChange = (e) => {
@@ -69,15 +69,15 @@ const ShippingForm = () => {
                                 <Select
                                     labelId="demo-simple-select-label"
                                     id="demo-simple-select"
-                                    value={state}
+                                    value={region}
                                     label="state"
-                                    onChange={handleStateChange}
+                                    onChange={(e) => setRegion(e.target.value)}
                                 >
                                     <MenuItem disabled value="">
                                         <em>State</em>
                                     </MenuItem>
-                                    <MenuItem value={"small"}>Lagos</MenuItem>
-                                    <MenuItem value={"medium"}>Abuja</MenuItem>
+                                    <MenuItem value={"lagos"}>Lagos</MenuItem>
+                                    <MenuItem value={"abuja"}>Abuja</MenuItem>
                                 </Select>
                             </FormControl>
                         </div>
